@@ -13,3 +13,11 @@
 - KAITO
 - TSUKI
 - MITSUI
+
+# Result
+
+![image](https://github.com/puneetuttam/100_day_js/assets/44168950/b011029d-54f6-42f0-9ddd-46f569eb2d0f)
+
+![image](https://github.com/puneetuttam/100_day_js/assets/44168950/967bdd92-cde6-404d-9d78-462b86cc49f2)
+
+
