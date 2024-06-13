@@ -1,6 +1,6 @@
 # Link
 
-https://vercel.com/hiccups-projects-0cd8c654/100-day-js-6yer
+https://100-day-js-6yer.vercel.app/
 
 # Result
 
