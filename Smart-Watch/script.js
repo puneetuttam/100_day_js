@@ -7,7 +7,7 @@ function clock() {
     hours: date.getHours() % 12 || 12,
     minutes: date.getMinutes(),
     seconds: date.getSeconds(),
-    day: date.getDay().toLocaleString("en-us", { weekday: "long" }),
+    day: date.toLocaleString("en-us", { weekday: "long" }),
     date: date.getDate(),
     month: date.toLocaleDateString("en-us", { month: "long" }),
     year: date.getFullYear(),
@@ -18,21 +18,28 @@ function clock() {
       return `<span class="value number">${val}</span>`;
     }
     if (typeof val == "string") {
-      return `<span class="value string">${val}</span>`;
+      return `<span class="value string">"${val}"</span>`;
     }
   };
 
   document.querySelector(".watch").innerHTML =
     `<span class=Keyword>const</span> 
-  <span class "def">clock</span>
-  <span class="operator">=</span>
-  {<br>}` +
+    <span class "def">clock</span>
+    <span class="Operator">=</span>
+    {<br>}` 
+    +
     Object.entries(clockObj).reduce(
       (str, [key, val]) =>
         str +
         `${"&nbsp".repeat(indent)}
-  <span class="property">${key}</span>:${valFormat(val)},<br>`,
+    <span class="property">${key}</span>:
+    ${valFormat(val)},
+    <br>`,
       ""
     ) +
     "};";
+
+  requestAnimationFrame(clock);
 }
+
+clock();
