@@ -1,0 +1,66 @@
+:root {
+  --dark: rgb(20, 20, 20);
+  --yellow: rgb(253, 216, 53);
+  --blue: rgb(98, 0, 234);
+
+  --c1: rgb(3,7,18);
+  --c2: rgb(168, 230, 53);
+
+  --left-color: var(--c1);
+  --right-color: var(--c2);
+}
+
+body {
+  margin: 0;
+   background-color: var(--dark); 
+}
+
+.side {
+  display: grid;
+  height: 100vh;
+  place-items: center;
+  overflow: hidden;
+  position: absolute;
+  width: 100%;
+}
+.side .title{
+  font-family: "Montserrat", sans-serif;
+  font-size: 7vw;
+  font-weight: 800;
+  margin: 0px 10vw;
+  width: 80vw;
+}
+
+.side .fancy{
+  font-family: "Permanent Marker",cursive;
+  font-size: 1.8em;
+  line-height: 0.6em;
+}
+
+#left-side{
+  background-color: var(--left-color);
+  width: 60%;
+  z-index: 2;
+}
+
+#left-side .title{
+  color: white;
+}
+
+#left-side .fancy{
+  color: var(--right-color)
+}
+
+
+#right-side{
+  background-color: var(--right-color);
+
+}
+
+#right-side .title{
+  color: var(--dark);
+}
+
+#right-side .fancy{
+  color: white
+}  
